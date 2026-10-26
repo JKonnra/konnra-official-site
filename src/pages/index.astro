@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://konnra.com/#organization",
+      "name": "KONNRA",
+      "legalName": "Dongguan Konnra Electronics Co., Ltd.",
+      "url": "https://konnra.com/",
+      "foundingDate": "2004",
+      "description": "Dongguan Konnra Electronics Co., Ltd. was established in 2004, specializing in precision electronic connector design, mold manufacturing, automated assembly, and custom wire harness solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No.6 Nanchang South Road, Chijiao, Wangniudun",
+        "addressLocality": "Dongguan",
+        "addressRegion": "Guangdong",
+        "postalCode": "523200",
+        "addressCountry": "CN"
+      },
+      "telephone": "+86 153 7007 9692",
+      "email": "sales003@konnra.com",
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "name": "IATF 16949", "credentialCategory": "certification" },
+        { "@type": "EducationalOccupationalCredential", "name": "ISO 9001", "credentialCategory": "certification" },
+        { "@type": "EducationalOccupationalCredential", "name": "ISO 14001", "credentialCategory": "certification" },
+        { "@type": "EducationalOccupationalCredential", "name": "ISO 13485", "credentialCategory": "certification" },
+        { "@type": "EducationalOccupationalCredential", "name": "UL", "credentialCategory": "certification" },
+        { "@type": "EducationalOccupationalCredential", "name": "LV214 & USCAR-2", "credentialCategory": "certification" }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://konnra.com/#website",
+      "url": "https://konnra.com/",
+      "name": "KONNRA",
+      "publisher": { "@id": "https://konnra.com/#organization" }
+    }
+  ]
+};
+
+const metrics = [
+  { value: "40,000㎡", label: "Production Area" },
+  { value: "53+", label: "R&D Engineers" },
+  { value: "150M", label: "Monthly Capacity (Sets)" },
+  { value: "30+", label: "R&D Patents" },
+  { value: "20+", label: "Years Experience" },
+  { value: "95%+", label: "Automation Rate" }
+];
+
+const crossRows = [
+  { incumbent: "Molex 5557-02R2", konnra: "H4200M1021601A", series: "KR4200", pitch: "4.2mm" },
+  { incumbent: "Molex 43645-0200", konnra: "H3000M1020201A", series: "KR3000", pitch: "3.0mm" },
+  { incumbent: "Molex 51004-0200", konnra: "H200001020101A", series: "KR2000", pitch: "2.0mm" },
+  { incumbent: "JST PAP-02V-S", konnra: "H201401020101A", series: "KR2014", pitch: "2.0mm" },
+  { incumbent: "JST SHR-02V-S-B", konnra: "H100001022401A", series: "KR1000", pitch: "1.0mm" },
+  { incumbent: "JST VHR-2N", konnra: "H396101020101A", series: "KR3961", pitch: "3.96mm" }
+];
+---
+
+<Layout title="China Electronic Connector and Wire Harness Manufacturer | KONNRA" jsonLd={orgSchema}>
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color:#fff; padding: 90px 0;">
+    <div class="container" style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:50px; align-items:center;">
+      <div>
+        <div style="display:inline-block; padding: 4px 12px; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: #38bdf8; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 20px;">
+          IATF 16949 · ISO 9001 · UL · LV214 Certified
+        </div>
+        <h1 style="font-size: 44px; line-height: 1.2; font-weight: 800; margin-bottom: 20px;">China Precision Connector &amp; Custom Wire Harness Manufacturer</h1>
+        <p style="font-size: 18px; color: #94a3b8; line-height: 1.6; margin-bottom: 32px;">Over 20 years of engineering excellence in electronic interconnects. Direct replacements for JST, Molex, and Hirose series with unmatched cost-efficiency and 2-3 week lead times.</p>
+        <div style="display:flex; gap:16px;">
+          <a href="/contact-us/#sample" class="btn btn-primary" style="padding: 12px 28px; font-size: 16px;">Request Free Samples</a>
+          <a href="/cross-reference/" class="btn btn-outline" style="padding: 12px 24px; font-size: 16px; color:#fff; border-color:#475569; background:transparent;">Search 840+ Equivalents →</a>
+        </div>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 30px;">
+        <h3 style="color:#fff; font-size: 18px; margin-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">Fast Technical Inquiry</h3>
+        <p style="color:#94a3b8; font-size: 14px; margin-bottom: 20px;">Get engineering consultation and customized quotation within 24 hours.</p>
+        <form action="/api/inquiry" method="POST" style="display:flex; flex-direction:column; gap:12px;">
+          <input type="text" placeholder="Your Name / Company" required style="padding: 10px 14px; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color:#fff; font-size:14px;" />
+          <input type="email" placeholder="Business Email" required style="padding: 10px 14px; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color:#fff; font-size:14px;" />
+          <input type="text" placeholder="Part Number / Specification (e.g. KR2025, JST PA)" style="padding: 10px 14px; border-radius: 6px; border: 1px solid #475569; background: #0f172a; color:#fff; font-size:14px;" />
+          <button type="submit" class="btn btn-primary" style="padding: 12px; font-size: 15px; margin-top: 8px;">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <section style="background: #f1f5f9; padding: 40px 0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container" style="display:grid; grid-template-columns: repeat(6, 1fr); gap: 20px; text-align:center;">
+      {metrics.map(m => (
+        <div>
+          <div style="font-size: 28px; font-weight: 800; color: #0284c7;">{m.value}</div>
+          <div style="font-size: 13px; color: #64748b; font-weight: 500; margin-top: 4px;">{m.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Cross-reference Feature -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div style="text-align:center; max-width: 800px; margin: 0 auto 50px;">
+        <span style="color:#0284c7; font-weight:600; font-size:14px; text-transform:uppercase; letter-spacing:1px;">Replacement &amp; Cross-Reference</span>
+        <h2 style="font-size: 32px; font-weight: 700; color: #0f172a; margin-top: 8px;">Already designed in JST or Molex? Find Konnra Equivalent</h2>
+        <p style="color: #64748b; margin-top: 12px; font-size: 16px;">Konnra publishes 840+ part-number mappings (288 JST and 552 Molex parts) with exact pitch, terminal types, and verified electrical ratings.</p>
+      </div>
+
+      <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow:hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+        <table style="width:100%; border-collapse:collapse; text-align:left; font-size: 14px;">
+          <thead style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;">
+            <tr>
+              <th style="padding: 16px 20px; color: #475569;">Incumbent Brand &amp; Part Number</th>
+              <th style="padding: 16px 20px; color: #475569;">Konnra Part Number</th>
+              <th style="padding: 16px 20px; color: #475569;">Konnra Series</th>
+              <th style="padding: 16px 20px; color: #475569;">Pitch</th>
+              <th style="padding: 16px 20px; text-align:right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {crossRows.map((r, i) => (
+              <tr style="border-bottom: 1px solid #e2e8f0;">
+                <td style="padding: 16px 20px; font-weight: 600; color: #0f172a;">{r.incumbent}</td>
+                <td style="padding: 16px 20px; font-family: monospace; color: #0284c7; font-weight: 600;">{r.konnra}</td>
+                <td style="padding: 16px 20px;"><span style="background:#e0f2fe; color:#0369a1; padding:3px 8px; border-radius:4px; font-size:12px; font-weight:600;">{r.series}</span></td>
+                <td style="padding: 16px 20px; color: #64748b;">{r.pitch}</td>
+                <td style="padding: 16px 20px; text-align:right;">
+                  <a href="/contact-us/#sample" class="btn btn-outline" style="padding: 4px 12px; font-size: 13px;">Request Sample</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div style="padding: 20px; background: #f8fafc; text-align: center; border-top: 1px solid #e2e8f0;">
+          <a href="/cross-reference/" class="btn btn-primary" style="padding: 10px 24px;">Browse All 840+ Cross-Reference Parts →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Grid -->
+  <section style="background: #f8fafc; padding: 80px 0; border-top: 1px solid #e2e8f0;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom: 50px;">
+        <h2 style="font-size: 32px; font-weight: 700; color: #0f172a;">Industries &amp; Applications</h2>
+        <p style="color: #64748b; margin-top: 8px;">Engineered connection solutions for demanding industrial environments.</p>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        {[
+          { title: "Automotive & EV", desc: "USCAR-2 and LV214 verified TPA connectors and automotive harnesses.", link: "/industry/automotive/" },
+          { title: "Renewable Energy", desc: "High-reliability interconnects for solar inverters and energy storage.", link: "/industry/renewable-energy/" },
+          { title: "Industrial Automation", desc: "Vibration-proof locking wire-to-board solutions for robotics & PLCs.", link: "/industry/industry-automation/" },
+          { title: "Medical Equipment", desc: "ISO 13485 certified precision micro-connectors for diagnostic devices.", link: "/industry/medical-equipment/" },
+          { title: "Consumer Electronics", desc: "Compact 1.0mm-2.0mm pitch connectors for smart appliances & audio.", link: "/industry/consumer-electronics/" },
+          { title: "Artificial Intelligence", desc: "High-current power distribution and high-speed data interconnects.", link: "/industry/artificial-intelligence/" }
+        ].map(item => (
+          <div style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding: 30px; transition: transform 0.2s, box-shadow 0.2s;">
+            <h3 style="font-size: 20px; font-weight: 600; color: #0f172a; margin-bottom: 10px;">{item.title}</h3>
+            <p style="color: #64748b; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">{item.desc}</p>
+            <a href={item.link} style="color:#0284c7; font-weight: 600; font-size: 14px;">Learn more →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

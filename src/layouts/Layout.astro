@@ -1,0 +1,141 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  jsonLd?: Record<string, any>;
+}
+
+const {
+  title = "China Electronic Connector and Wire Harness Manufacturer | KONNRA",
+  description = "Dongguan Konnra Electronics Co., Ltd. specializes in precision connector design, manufacturing, and wire harness solutions. Direct cross-reference for JST and Molex.",
+  canonical = Astro.url.href,
+  jsonLd
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <link rel="icon" type="image/svg+xml" href="/brand/konnra-logo-blue.svg" />
+  
+  {jsonLd && (
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )}
+  
+  <style is:global>
+    :root {
+      --primary: #0056b3;
+      --primary-hover: #004085;
+      --dark: #0f172a;
+      --gray-light: #f8fafc;
+      --gray-border: #e2e8f0;
+      --text: #334155;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Header */
+    header { border-bottom: 1px solid var(--gray-border); background: #ffffff; position: sticky; top: 0; z-index: 50; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { font-size: 24px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    nav { display: flex; gap: 24px; font-weight: 500; font-size: 15px; }
+    nav a { color: var(--dark); transition: color 0.2s; }
+    nav a:hover { color: var(--primary); text-decoration: none; }
+    .header-actions { display: flex; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 8px 18px; border-radius: 6px; font-weight: 500; font-size: 14px; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-outline { border: 1px solid var(--gray-border); color: var(--dark); background: #fff; }
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* Footer */
+    footer { background: var(--dark); color: #94a3b8; padding: 60px 0 30px; margin-top: 80px; font-size: 14px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { color: #fff; margin-bottom: 16px; font-size: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: #94a3b8; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid #334155; padding-top: 24px; text-align: center; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span>KONNRA</span>
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/cross-reference/">Cross-Reference</a>
+        <a href="/products/">Products</a>
+        <a href="/industry/">Industries</a>
+        <a href="/about-us/">About Us</a>
+        <a href="/resources/">Resources</a>
+        <a href="/contact-us/">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="/contact-us/#sample" class="btn btn-outline">Request Sample</a>
+        <a href="https://wa.me/8613826905495" target="_blank" class="btn btn-primary">WhatsApp Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 style="color:#38bdf8;">Dongguan Konnra Electronics Co., Ltd.</h4>
+          <p style="margin-top:12px; line-height:1.7;">High-tech enterprise specialized in connector design, precision stamping, injection molding, automated assembly, and custom wire harness solutions since 2004.</p>
+          <p style="margin-top:16px;">📍 No.6 Nanchang South Rd, Wangniudun, Dongguan, Guangdong, China</p>
+          <p style="margin-top:6px;">✉️ sales003@konnra.com · 📞 +86 153 7007 9692</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products &amp; Tools</h4>
+          <ul>
+            <li><a href="/cross-reference/">Cross-Reference Engine</a></li>
+            <li><a href="/products/">Wire-to-Board Series</a></li>
+            <li><a href="/products/">TPA Automotive Connectors</a></li>
+            <li><a href="/products/">Custom Wire Harnesses</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/industry/automotive/">Automotive &amp; EV</a></li>
+            <li><a href="/industry/renewable-energy/">Renewable Energy</a></li>
+            <li><a href="/industry/medical-equipment/">Medical Technology</a></li>
+            <li><a href="/industry/industry-automation/">Industrial Automation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quality &amp; Standards</h4>
+          <p style="font-size:13px; line-height:1.6; margin-bottom:12px;">IATF 16949 · ISO 9001 · ISO 14001 · ISO 13485 · UL · LV214 · USCAR-2 · RoHS · REACH</p>
+          <a href="/contact-us/" class="btn btn-primary" style="margin-top:8px;">Get Fast Quote</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Dongguan Konnra Electronics Co., Ltd. All rights reserved. Built with modern Astro &amp; Cloudflare Edge Architecture.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

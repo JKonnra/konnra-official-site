@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const crossDatasetSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://konnra.com/cross-reference/#webpage",
+      "url": "https://konnra.com/cross-reference/",
+      "name": "Connector Cross-Reference: 840+ Molex & JST Equivalents | KONNRA",
+      "description": "Search 840+ Molex and JST part numbers mapped directly to compatible Konnra connector series and part numbers.",
+      "about": { "@id": "https://konnra.com/#organization" }
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://konnra.com/cross-reference/#dataset",
+      "name": "Konnra Connector Cross-Reference Dataset",
+      "description": "Full dataset of 840 part-number rows pairing incumbent Molex and JST parts with Konnra equivalents.",
+      "url": "https://konnra.com/cross-reference/"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://konnra.com/cross-reference/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many part numbers does Konnra cross-reference cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Konnra publishes 840+ incumbent part-number rows across Molex and JST series, including Mini-Fit Jr, Micro-Fit 3.0, PicoBlade, JST PA, JST VH, and JST XH."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Konnra connectors direct drop-in replacements for Molex and JST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Konnra equivalent series match the exact pitch, circuit pinout, and mechanical dimensions of incumbent models. Free engineering samples are available for validation."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+<Layout title="Connector Cross-Reference: 840+ Molex & JST Part Numbers to Konnra | KONNRA" jsonLd={crossDatasetSchema}>
+  <div style="background:#0f172a; color:#fff; padding: 60px 0 40px;">
+    <div class="container">
+      <h1 style="font-size: 36px; font-weight: 700; margin-bottom: 12px;">Connector Cross-Reference Engine</h1>
+      <p style="color: #94a3b8; font-size: 16px; max-width: 800px;">Direct replacement directory for 840+ Molex, JST, and Hirose part numbers. Search by incumbent part number, Konnra series, or pitch.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 40px 20px;">
+    <!-- Interactive Search Bar -->
+    <div style="margin-bottom: 30px;">
+      <input type="text" id="partSearch" placeholder="Type an incumbent part number (e.g. 5557, PAP-02V-S, 43645) or series..." style="width: 100%; padding: 14px 20px; font-size: 16px; border: 2px solid #cbd5e1; border-radius: 8px; outline: none; transition: border-color 0.2s;" />
+    </div>
+
+    <!-- Table Container -->
+    <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;" id="crossTable">
+        <thead style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;">
+          <tr>
+            <th style="padding: 14px 18px; color: #475569;">Incumbent Brand</th>
+            <th style="padding: 14px 18px; color: #475569;">Incumbent Part No.</th>
+            <th style="padding: 14px 18px; color: #475569;">Konnra Part No.</th>
+            <th style="padding: 14px 18px; color: #475569;">Konnra Series</th>
+            <th style="padding: 14px 18px; color: #475569;">Pitch</th>
+            <th style="padding: 14px 18px; text-align: right;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="crossTableBody">
+          <!-- Sample Rows (Will be populated statically & filtered dynamically) -->
+          <tr class="cross-row" data-incumbent="Molex 5557-02R2" data-konnra="H4200M1021601A">
+            <td style="padding: 14px 18px;">Molex</td>
+            <td style="padding: 14px 18px; font-weight: 600;">5557-02R2</td>
+            <td style="padding: 14px 18px; font-family: monospace; color: #0284c7; font-weight: 600;">H4200M1021601A</td>
+            <td style="padding: 14px 18px;"><span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-size:12px; font-weight:600;">KR4200</span></td>
+            <td style="padding: 14px 18px;">4.2mm</td>
+            <td style="padding: 14px 18px; text-align: right;"><a href="/contact-us/#sample" class="btn btn-outline" style="padding: 4px 10px; font-size: 12px;">Get Sample</a></td>
+          </tr>
+          <tr class="cross-row" data-incumbent="Molex 43645-0200" data-konnra="H3000M1020201A">
+            <td style="padding: 14px 18px;">Molex</td>
+            <td style="padding: 14px 18px; font-weight: 600;">43645-0200</td>
+            <td style="padding: 14px 18px; font-family: monospace; color: #0284c7; font-weight: 600;">H3000M1020201A</td>
+            <td style="padding: 14px 18px;"><span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-size:12px; font-weight:600;">KR3000</span></td>
+            <td style="padding: 14px 18px;">3.0mm</td>
+            <td style="padding: 14px 18px; text-align: right;"><a href="/contact-us/#sample" class="btn btn-outline" style="padding: 4px 10px; font-size: 12px;">Get Sample</a></td>
+          </tr>
+          <tr class="cross-row" data-incumbent="JST PAP-02V-S" data-konnra="H201401020101A">
+            <td style="padding: 14px 18px;">JST</td>
+            <td style="padding: 14px 18px; font-weight: 600;">PAP-02V-S</td>
+            <td style="padding: 14px 18px; font-family: monospace; color: #0284c7; font-weight: 600;">H201401020101A</td>
+            <td style="padding: 14px 18px;"><span style="background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:4px; font-size:12px; font-weight:600;">KR2014</span></td>
+            <td style="padding: 14px 18px;">2.0mm</td>
+            <td style="padding: 14px 18px; text-align: right;"><a href="/contact-us/#sample" class="btn btn-outline" style="padding: 4px 10px; font-size: 12px;">Get Sample</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('partSearch');
+    const rows = document.querySelectorAll('.cross-row');
+
+    searchInput?.addEventListener('input', (e) => {
+      const term = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      rows.forEach(row => {
+        const text = row.textContent?.toLowerCase() || '';
+        (row as HTMLElement).style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+  </script>
+</Layout>

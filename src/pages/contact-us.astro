@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact Us & Request Free Samples | KONNRA Connectors">
+  <div style="background:#0f172a; color:#fff; padding: 60px 0 40px;">
+    <div class="container">
+      <h1 style="font-size: 36px; font-weight: 700; margin-bottom: 12px;">Contact Us &amp; Sample Request</h1>
+      <p style="color: #94a3b8; font-size: 16px;">Direct engineering and sales support for global customers.</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 60px 20px; display:grid; grid-template-columns: 1fr 1fr; gap:60px;">
+    <div>
+      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 20px; color:#0f172a;">Get in Touch</h2>
+      <p style="color:#64748b; line-height:1.7; margin-bottom: 30px;">Whether you need product specifications, 3D CAD models, custom wire harness design, or free sample kits for evaluation, our technical team is ready to assist you.</p>
+
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div style="display:flex; gap:16px;">
+          <div style="width:40px; height:40px; background:#e0f2fe; color:#0284c7; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;">📍</div>
+          <div>
+            <div style="font-weight:600; color:#0f172a;">Factory &amp; R&amp;D Headquarters</div>
+            <div style="color:#64748b; font-size:14px; margin-top:2px;">No.6 Nanchang South Road, Chijiao, Wangniudun, Dongguan, Guangdong, 523200, China</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:16px;">
+          <div style="width:40px; height:40px; background:#e0f2fe; color:#0284c7; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;">✉️</div>
+          <div>
+            <div style="font-weight:600; color:#0f172a;">Sales &amp; Inquiry Email</div>
+            <div style="color:#64748b; font-size:14px; margin-top:2px;">sales003@konnra.com</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:16px;">
+          <div style="width:40px; height:40px; background:#e0f2fe; color:#0284c7; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:18px;">📞</div>
+          <div>
+            <div style="font-weight:600; color:#0f172a;">Phone &amp; WhatsApp</div>
+            <div style="color:#64748b; font-size:14px; margin-top:2px;">+86 153 7007 9692 · +86 138 2690 5495</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:36px;" id="sample">
+      <h3 style="font-size: 20px; font-weight:700; color:#0f172a; margin-bottom:20px;">Request Samples / RFQ</h3>
+      <form action="/api/contact" method="POST" style="display:flex; flex-direction:column; gap:16px;">
+        <div>
+          <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:#334155;">Full Name *</label>
+          <input type="text" name="name" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:#334155;">Company &amp; Country *</label>
+          <input type="text" name="company" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:#334155;">Business Email *</label>
+          <input type="email" name="email" required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color:#334155;">Target Part Numbers or Project Details *</label>
+          <textarea name="message" rows="4" placeholder="Please list the connector series, pitch, pin counts, or Molex/JST part numbers you need..." required style="width:100%; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:14px;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="padding:12px; font-size:16px;">Submit Sample Request</button>
+      </form>
+    </div>
+  </div>
+</Layout>
