@@ -1,0 +1,12 @@
+{
+  "logo": "/brand/logo.svg",
+  "logoText": "KONNRA",
+  "navItems": [
+    { "label": "Products", "url": "/cross-reference/" },
+    { "label": "Cross Reference", "url": "/cross-reference/" },
+    { "label": "About Us", "url": "/about-us/" },
+    { "label": "Contact Us", "url": "/contact-us/" }
+  ],
+  "ctaText": "Request Sample",
+  "ctaLink": "/contact-us/"
+}

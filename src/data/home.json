@@ -1,0 +1,11 @@
+{
+  "heroTitle": "China Electronic Connector and Wire Harness Manufacturer",
+  "heroDescription": "With more than 20 years of experience as electronic connector and wire harness manufacturer, our purpose is constantly create value to our customer.",
+  "workshopTitle": "Committed to connector research and development",
+  "workshops": [
+    { "name": "Mold Workshop", "desc": "Precision mold design and manufacturing", "image": "/img/home/ws-mold-2400.jpg" },
+    { "name": "Injection Molding Workshop", "desc": "Precision injection molding", "image": "/img/home/ws-injection-2400.jpg" },
+    { "name": "Stamping Workshop", "desc": "Precision stamping", "image": "/img/home/ws-stamping-2400.jpg" },
+    { "name": "Wiring Harness Workshop", "desc": "Customized connector and wiring harness R&D one-stop solution", "image": "/img/home/ws-harness-2400.jpg" }
+  ]
+}

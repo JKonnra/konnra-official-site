@@ -8,8 +8,11 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
+  # ==========================================
+  # 1. 业务内容管理 (Products & Blog)
+  # ==========================================
   - name: "products"
-    label: "产品中心 (Products)"
+    label: "🔌 产品中心 (Products)"
     folder: "src/content/products"
     create: true
     slug: "{{slug}}"
@@ -32,7 +35,7 @@ collections:
       - { label: "详细图文介绍与排版 (Detailed Description & Layout)", name: "body", widget: "markdown" }
 
   - name: "blog"
-    label: "博客与新闻 (Blog & News)"
+    label: "📝 博客与新闻 (Blog & News)"
     folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -45,25 +48,79 @@ collections:
       - { label: "作者 (Author)", name: "author", widget: "string", default: "Konnra Engineering Team" }
       - { label: "文章正文 (Body)", name: "body", widget: "markdown" }
 
-  - name: "pages"
-    label: "单页面配置 (Page Contents)"
+  # ==========================================
+  # 2. 全站公共模板与全局配置管理 (Global Templates & Common Modules)
+  # ==========================================
+  - name: "global_templates"
+    label: "🌐 全站公共模板管理 (Global Templates)"
     files:
-      - label: "首页配置 (Home Page)", name: "home", file: "src/data/home.json", fields: [
-          { label: "主标题", name: "heroTitle", widget: "string" },
-          { label: "副标题/描述", name: "heroSubtitle", widget: "text" },
-          { label: "主宣传图", name: "heroBanner", widget: "image" }
+      - label: "1. 顶部导航与 Logo 模板 (Header & Navigation)"
+        name: "header"
+        file: "src/data/header.json"
+        fields:
+          - { label: "网站 Logo 图片", name: "logo", widget: "image" }
+          - { label: "Logo 备用文字", name: "logoText", widget: "string", default: "KONNRA" }
+          - { label: "顶部导航菜单项", name: "navItems", widget: "list", fields: [
+              { label: "菜单名称", name: "label", widget: "string" },
+              { label: "跳转链接", name: "url", widget: "string" }
+            ]}
+          - { label: "右上角咨询按钮文字", name: "ctaText", widget: "string", default: "Request Sample" }
+          - { label: "右上角咨询按钮链接", name: "ctaLink", widget: "string", default: "/contact-us/" }
+
+      - label: "2. 底部版权与栏目模板 (Footer & Copyright)"
+        name: "footer"
+        file: "src/data/footer.json"
+        fields:
+          - { label: "公司版权声明", name: "copyright", widget: "string", default: "© 2026 Dongguan Konnra Electronics Co., Ltd. All rights reserved." }
+          - { label: "公司资质与认证文字", name: "certifications", widget: "string", default: "IATF 16949 · ISO 9001 · UL · LV214 Certified" }
+          - { label: "ICP 备案号 / 执照信息", name: "icp", widget: "string", required: false }
+          - { label: "底部快速链接组", name: "footerLinks", widget: "list", fields: [
+              { label: "链接文字", name: "title", widget: "string" },
+              { label: "链接地址", name: "url", widget: "string" }
+            ]}
+
+      - label: "3. 全局联系方式与客服模板 (Contact & Social)"
+        name: "contact"
+        file: "src/data/contact.json"
+        fields:
+          - { label: "公司官方名称", name: "companyName", widget: "string", default: "Dongguan Konnra Electronics Co., Ltd." }
+          - { label: "全球服务邮箱", name: "email", widget: "string", default: "sales003@konnra.com" }
+          - { label: "全球服务电话", name: "phone", widget: "string", default: "+86 153 7007 9692" }
+          - { label: "工厂与总部地址", name: "address", widget: "string", default: "No.6 Nanchang South Road, Chijiao, Wangniudun, Dongguan, Guangdong, 523200, China" }
+          - { label: "WhatsApp 客服号码 (含国别码)", name: "whatsapp", widget: "string", default: "+8613826905495" }
+          - { label: "Smartsupp / 客服插件 Key", name: "chatPluginKey", widget: "string", required: false }
+
+      - label: "4. 全局底栏询盘横幅模板 (Global CTA Banner)"
+        name: "cta_banner"
+        file: "src/data/cta_banner.json"
+        fields:
+          - { label: "询盘横幅大标题", name: "heading", widget: "string", default: "Now we connected." }
+          - { label: "副文案描述", name: "subheading", widget: "text", default: "Simplify your experience with a team that can support your connector and wiring harness requirements." }
+          - { label: "主按钮文案", name: "btnText", widget: "string", default: "Contact us" }
+          - { label: "主按钮链接", name: "btnUrl", widget: "string", default: "/contact-us/" }
+          - { label: "背景横幅图片", name: "bgImage", widget: "image", required: false }
+
+  # ==========================================
+  # 3. 独立单页面内容管理 (Single Pages)
+  # ==========================================
+  - name: "single_pages"
+    label: "📄 独立单页面内容 (Single Pages)"
+    files:
+      - label: "🏠 首页独立区块配置 (Home Page Content)", name: "home", file: "src/data/home.json", fields: [
+          { label: "Hero 主标题", name: "heroTitle", widget: "string", default: "China Electronic Connector and Wire Harness Manufacturer" },
+          { label: "Hero 核心文案描述", name: "heroDescription", widget: "text" },
+          { label: "工厂车间展示区块标题", name: "workshopTitle", widget: "string", default: "Committed to connector research and development" },
+          { label: "车间子项列表", name: "workshops", widget: "list", fields: [
+              { label: "车间名称", name: "name", widget: "string" },
+              { label: "车间描述", name: "desc", widget: "string" },
+              { label: "车间配图", name: "image", widget: "image" }
+            ]}
         ]
-      - label: "关于我们 (About Us)", name: "about", file: "src/data/about.json", fields: [
-          { label: "公司介绍标题", name: "title", widget: "string" },
-          { label: "工厂面积数据", name: "area", widget: "string", default: "40,000㎡" },
+      - label: "🏢 关于我们页面配置 (About Us Page)", name: "about", file: "src/data/about.json", fields: [
+          { label: "主标题", name: "title", widget: "string", default: "China Precision Connector & Custom Wire Harness Manufacturer" },
+          { label: "厂房面积数据", name: "area", widget: "string", default: "40,000㎡" },
           { label: "研发工程师人数", name: "engineers", widget: "string", default: "53+" },
-          { label: "月产能数据", name: "capacity", widget: "string", default: "150M Sets" },
-          { label: "详细图文介绍", name: "content", widget: "markdown" }
-        ]
-      - label: "联系方式配置 (Contact Info)", name: "contact", file: "src/data/contact.json", fields: [
-          { label: "公司名称", name: "companyName", widget: "string" },
-          { label: "官方邮箱", name: "email", widget: "string" },
-          { label: "联系电话", name: "phone", widget: "string" },
-          { label: "公司地址", name: "address", widget: "string" },
-          { label: "WhatsApp号码", name: "whatsapp", widget: "string", required: false }
+          { label: "月产能量 (Sets)", name: "capacity", widget: "string", default: "150M Sets" },
+          { label: "自动化率", name: "automation", widget: "string", default: "95%+" },
+          { label: "详细企业图文介绍", name: "content", widget: "markdown" }
         ]
