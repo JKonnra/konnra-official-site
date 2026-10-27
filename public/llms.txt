@@ -1,44 +1,111 @@
 # KONNRA — Dongguan Konnra Electronics Co., Ltd.
 
-> KONNRA (Dongguan Konnra Electronics Co., Ltd., established 2004) designs and manufactures electronic connectors and wire harnesses in Dongguan, Guangdong, China. It publishes part-number cross-references to JST, Molex, Hirose, and Yeonho series.
+> KONNRA (Dongguan Konnra Electronics Co., Ltd., established 2004) designs and manufactures electronic connectors and wire harnesses in Dongguan, Guangdong, China. It publishes part-number cross-references to JST, Molex and Hirose series.
 
-## Company Facts
+## Company facts
 - Name: KONNRA
-- Legal Name: Dongguan Konnra Electronics Co., Ltd.
+- Legal name: Dongguan Konnra Electronics Co., Ltd.
 - Founded: 2004
 - Address: No.6 Nanchang South Road, Chijiao, Wangniudun, Dongguan, Guangdong, 523200, China
 - Email: sales003@konnra.com
 - Phone: +86 153 7007 9692 · Fax: +86-769-85846797
 - WhatsApp: https://wa.me/8613826905495
 
-## Quality & Automotive Certifications
-- IATF 16949 (Automotive Quality Management)
-- ISO 9001 (Quality Management System)
-- ISO 14001 (Environmental Management)
-- ISO 13485 (Medical Devices Quality System)
-- UL International Safety Certification
-- LV214 & USCAR-2 Automotive Connector Verification
-- RoHS & REACH Compliance
-- IPC Standard Assembly
+## Certifications shown on the site (company-reported)
+- 45 certificates
+- Raw material supply chain with reliable quality system certification.
+- 2009: Obtained IS09001 swstem certification
+- 2015: ERP system officially on operation Obtained international UL certification
+- 2017: Obtained “National high-tech Enterprise Certificate”
+- 2018: Obtained IATF16949 quality system certification
+- 2021: Precision wiring harness factory was established in Kunshan Several automotive connectors obtained national standard certification &US CAR-2 Purchased headquarters and R&D centre
+- 2022: CRM system on operation Set up central China marketing department in Chengdu Obtained the national specialized special certificate
+- 2023: Obtained Medical system IS013485 PLM system on operation TPA automotive connectors obtained certificate from LV214&US CAR-2
 
-## Production & Engineering Capabilities
-- 40,000㎡ Production Area across 4 factory bases
-- 53 Technical R&D Engineers
-- 150M sets Monthly Production Volume
-- 30+ R&D Patents
-- 95%+ Factory Automation Rate
-- Custom Mold Design, Precision Stamping, Automated Injection Molding & CCD Inspection
+## Claims as published (company-reported, not independently verified)
+- 4 factory bases ensure production capability.
+- 45 certificates
+- Lead time: connector 2-3 weeks, wiring harness 3-4weeks.
+- Raw material supply chain with reliable quality system certification.
+- Factory automation rate exceed 95%
+- Customized connector and wiring harness R&D one-stop solution
 
-## Product Families & Cross-References
-- Wire-to-Board Connectors (0.8mm, 1.0mm, 1.2mm, 1.25mm, 1.5mm, 2.0mm, 2.54mm, 3.0mm, 3.96mm, 4.2mm, 6.0mm Pitch)
-- Wire-to-Wire & Board-to-Board Connectors
-- Automotive TPA Connectors & Wire Harnesses
-- 840+ Direct Replacements for Molex & JST Part Numbers
+## Hubs
+- Home: https://konnra-demo.chidorigeo.com/
+- Products: https://konnra-demo.chidorigeo.com/products/
+- Cross-reference (part-number catalogue): https://konnra-demo.chidorigeo.com/cross-reference/
+- Applications: https://konnra-demo.chidorigeo.com/application/
+- About us: https://konnra-demo.chidorigeo.com/about-us/
+- FAQ: https://konnra-demo.chidorigeo.com/service-support/faq/
+- Resources: https://konnra-demo.chidorigeo.com/resources/
+- Contact: https://konnra-demo.chidorigeo.com/contact-us/
 
-## Hubs & Key Resources
-- Homepage: https://konnra.com/
-- Cross-Reference Catalog: https://konnra.com/cross-reference/
-- Product Directory: https://konnra.com/products/
-- Industry Applications: https://konnra.com/industry/
-- Technical Guides & Knowledge Base: https://konnra.com/resources/
-- Sample Request & Contact: https://konnra.com/contact-us/
+## Blog (Konnra's guides and news, rebuilt on-site at their konnra.com paths)
+- Posts: 403, English only (0 translated post pages are built); listed (date · title · URL · description) with the English full text in llms-full.txt
+- Index of all posts by topic: https://konnra-demo.chidorigeo.com/resources/
+
+## Cross-reference catalogue
+- Part-number rows: 840 (836 with a per-part page); incumbents: JST 288, Molex 552
+- Per-part table (every row, incumbent MPN → Konnra MPN): in each locale's llms-full file
+- Molex mini-fit jr 5556/5557/5558/5559 series → Konnra KR4200 (https://konnra-demo.chidorigeo.com/kr4200-equivalent-to-molex-mini-fit-jr-5556-5557-5558-5559-series/)
+- Molex mx2.0 series → Konnra KR2017 (https://konnra-demo.chidorigeo.com/kr2017-equivalent-to-molex-mx2-0-series/)
+- JST PA 2.0 series → Konnra KR2014 (https://konnra-demo.chidorigeo.com/kr2014-equivalent-to-jst-pa-2-0-series/)
+- JST SH1.0 series → Konnra KR1000 (https://konnra-demo.chidorigeo.com/kr1000-equivalent-to-jst-sh1-0-series/)
+- Molex picoblade mx1.25 series → Konnra KR1250 (https://konnra-demo.chidorigeo.com/kr1250-equivalent-to-molex-picoblade-mx1-25-series/)
+- JST ZH 1.5 mm series → Konnra KR1501 (https://konnra-demo.chidorigeo.com/kr1501-equivalent-to-jst-zh-1-5-mm-series/)
+- Molex MicroBlade mx2.0 series → Konnra KR2000 (https://konnra-demo.chidorigeo.com/kr2000-equivalent-to-molex-microblade-mx2-0-series/)
+- Molex mini fit 3.0 → Konnra KR3000 (https://konnra-demo.chidorigeo.com/kr3000-equivalent-to-molex-mini-fit-3-0/)
+- JST VH3.96 series → Konnra KR3961 (https://konnra-demo.chidorigeo.com/kr3961-equivalent-to-jst-vh3-96-series/)
+- Hirose DF19 → Konnra KR1002 (https://konnra-demo.chidorigeo.com/cross-reference/kr1002-hirose-df19/)
+- Molex Pico-EZmate mx1.2 → Konnra KR1200 (https://konnra-demo.chidorigeo.com/cross-reference/kr1200-molex-pico-ezmate-mx1-2/)
+- JST ACH1.2 → Konnra KR1201 (https://konnra-demo.chidorigeo.com/cross-reference/kr1201-jst-ach1-2/)
+- Molex PicoBlade mx1.25 → Konnra KR1251 (https://konnra-demo.chidorigeo.com/cross-reference/kr1251-molex-picoblade-mx1-25/)
+- Molex mx1.25 → Konnra KR1252 (https://konnra-demo.chidorigeo.com/cross-reference/kr1252-molex-mx1-25/)
+- Molex PanelMate mx1.25 → Konnra KR1253 (https://konnra-demo.chidorigeo.com/cross-reference/kr1253-molex-panelmate-mx1-25/)
+- Hirose DF14 → Konnra KR1255 (https://konnra-demo.chidorigeo.com/cross-reference/kr1255-hirose-df14/)
+- Hirose DF13 → Konnra KR1256 (https://konnra-demo.chidorigeo.com/cross-reference/kr1256-hirose-df13/)
+- JST GH1.25 → Konnra KR1259 (https://konnra-demo.chidorigeo.com/cross-reference/kr1259-jst-gh1-25/)
+- Molex Pico SPOX mx1.5 → Konnra KR1500 (https://konnra-demo.chidorigeo.com/cross-reference/kr1500-molex-pico-spox-mx1-5/)
+- JST SZN1.5 → Konnra KR1502 (https://konnra-demo.chidorigeo.com/cross-reference/kr1502-jst-szn1-5/)
+- Molex CLIK Mate mx1.5 → Konnra KR1507 (https://konnra-demo.chidorigeo.com/cross-reference/kr1507-molex-clik-mate-mx1-5/)
+- JST PH2.0 → Konnra KR2001 (https://konnra-demo.chidorigeo.com/cross-reference/kr2001-jst-ph2-0/)
+- JST SAN SJN 2.0 → Konnra KR2003 (https://konnra-demo.chidorigeo.com/cross-reference/kr2003-jst-san-sjn-2-0/)
+- Yeonho YH200 PH 2.0 → Konnra KR2004 (https://konnra-demo.chidorigeo.com/cross-reference/kr2004-yeonho-yh200-ph-2-0/)
+- JST PHD 2.0 → Konnra KR2005 (https://konnra-demo.chidorigeo.com/cross-reference/kr2005-jst-phd-2-0/)
+- Molex MX2.0 Series → Konnra KR2007 (https://konnra-demo.chidorigeo.com/cross-reference/kr2007-molex-mx2-0-series/)
+- Hirose DF3 → Konnra KR2009 (https://konnra-demo.chidorigeo.com/cross-reference/kr2009-hirose-df3/)
+- Molex MINI50 → Konnra KR2021 (https://konnra-demo.chidorigeo.com/cross-reference/kr2021-molex-mini50/)
+- JST PAL 2.0 → Konnra KR2022 (https://konnra-demo.chidorigeo.com/cross-reference/kr2022-jst-pal-2-0/)
+- JST ULH 2.0 → Konnra KR2023 (https://konnra-demo.chidorigeo.com/cross-reference/kr2023-jst-ulh-2-0/)
+- Molex Mini-SPOX → Konnra KR2500 (https://konnra-demo.chidorigeo.com/cross-reference/kr2500-molex-mini-spox/)
+- JST XH 2.5 → Konnra KR2501 (https://konnra-demo.chidorigeo.com/cross-reference/kr2501-jst-xh-2-5/)
+- Yeonho YH2.5 → Konnra KR2502 (https://konnra-demo.chidorigeo.com/cross-reference/kr2502-yeonho-yh2-5/)
+- JST EH 2.5 → Konnra KR2504 (https://konnra-demo.chidorigeo.com/cross-reference/kr2504-jst-eh-2-5/)
+- JST SM 2.5 → Konnra KR2507 (https://konnra-demo.chidorigeo.com/cross-reference/kr2507-jst-sm-2-5/)
+- JST SCN 2.5 → Konnra KR2508 (https://konnra-demo.chidorigeo.com/cross-reference/kr2508-jst-scn-2-5/)
+- JST XA 2.5 → Konnra KR2516 (https://konnra-demo.chidorigeo.com/cross-reference/kr2516-jst-xa-2-5/)
+- Molex SL MX2.54 → Konnra KR2541 (https://konnra-demo.chidorigeo.com/cross-reference/kr2541-molex-sl-mx2-54/)
+- JST SDN3.96 → Konnra KR3963 (https://konnra-demo.chidorigeo.com/cross-reference/kr3963-jst-sdn3-96/)
+- JST null → Konnra KR0800 (https://konnra-demo.chidorigeo.com/cross-reference/kr0800-jst/)
+
+Full text (English): https://konnra-demo.chidorigeo.com/llms-full.txt
+Full text (af): https://konnra-demo.chidorigeo.com/llms-full.af.txt
+Full text (ar): https://konnra-demo.chidorigeo.com/llms-full.ar.txt
+Full text (de): https://konnra-demo.chidorigeo.com/llms-full.de.txt
+Full text (es): https://konnra-demo.chidorigeo.com/llms-full.es.txt
+Full text (fi): https://konnra-demo.chidorigeo.com/llms-full.fi.txt
+Full text (fr): https://konnra-demo.chidorigeo.com/llms-full.fr.txt
+Full text (id): https://konnra-demo.chidorigeo.com/llms-full.id.txt
+Full text (it): https://konnra-demo.chidorigeo.com/llms-full.it.txt
+Full text (ja): https://konnra-demo.chidorigeo.com/llms-full.ja.txt
+Full text (ko): https://konnra-demo.chidorigeo.com/llms-full.ko.txt
+Full text (nl): https://konnra-demo.chidorigeo.com/llms-full.nl.txt
+Full text (pt-BR): https://konnra-demo.chidorigeo.com/llms-full.pt-br.txt
+Full text (ru): https://konnra-demo.chidorigeo.com/llms-full.ru.txt
+Full text (th): https://konnra-demo.chidorigeo.com/llms-full.th.txt
+Full text (tl): https://konnra-demo.chidorigeo.com/llms-full.tl.txt
+Full text (tr): https://konnra-demo.chidorigeo.com/llms-full.tr.txt
+Full text (uk): https://konnra-demo.chidorigeo.com/llms-full.uk.txt
+Full text (ur): https://konnra-demo.chidorigeo.com/llms-full.ur.txt
+Full text (vi): https://konnra-demo.chidorigeo.com/llms-full.vi.txt
+Full text (zh-Hans): https://konnra-demo.chidorigeo.com/llms-full.zh-hans.txt
